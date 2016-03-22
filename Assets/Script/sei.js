@@ -29,7 +29,7 @@ function Start() {
 	timerText = timer.GetComponent(Text); //タイマーを取得
 	scoreText = score.GetComponent(Text); //scoreTextを設定
 	CountDown();							//カウントダウン開始
-	DropBall(55);
+	DropBall(40);
 }
  
 function Update() {
