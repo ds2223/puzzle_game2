@@ -22,6 +22,9 @@ public var score: GameObject;			//スコア表示
 private var scoreText: Text;			//スコア表示のテキスト
 private var currentScore = 0;			//現在のスコア
 
+public var myClip : AudioClip;			//SE用の音楽オブジェクト
+
+
 function Start() {
 	timerText = timer.GetComponent(Text); //タイマーを取得
 	scoreText = score.GetComponent(Text); //scoreTextを設定
@@ -49,6 +52,7 @@ scoreText.text = "Score:" + currentScore; //現在のスコアを表示
 private function OnDragStart() {
 var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置にあるオブジェクト
 	if (col != null) {					//なにかをドラッグしているとき
+	GetComponent.<AudioSource>().PlayOneShot(myClip);//カチカチ音がする
 		var colObj = col.gameObject;
 		if (colObj.name.IndexOf("Ball") != -1) {//名前に"Ball"を含むオブジェクトをドラッグしたとき
 			removableBallList = new Array(); 	//消去するボールのリストを初期化
@@ -97,6 +101,7 @@ var col = GetCurrentHitCollider();
 	if (col != null) {						//なにかをドラッグしているとき
 	var colObj = col.gameObject;
 		if (colObj.name == currentName) {	//現在リストに追加している色と同じ色のボールのとき
+		GetComponent.<AudioSource>().PlayOneShot(myClip);//カチカチ音がする
 			if (lastBall != colObj) {		//直前にリストにいれたのと異なるボールのとき
 				var dist = Vector2.Distance(lastBall.transform.position, colObj.transform.position);
 				if (dist <= 1.5) {			//ボール間の距離が一定値以下のとき
