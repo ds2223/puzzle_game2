@@ -72,10 +72,10 @@ private function OnDragEnd() {
 				var go = Resources.Load("Prefab/explosion") as GameObject;//アセットのオブジェクトにアクセス
 				Instantiate(go,t.transform.position,Quaternion.identity);//爆発のエフェクト
 				if(length == 4){
-					Instantiate(Resources.Load("Prefab/thunder"), new Vector2(0,1), Quaternion.identity);
+					Instantiate(Resources.Load("Prefab/thunder"), new Vector2(0,0), Quaternion.identity);
 				}
 				if(length >= 5){
-					Instantiate(Resources.Load("Prefab/flame"), new Vector2(0,1), Quaternion.identity);
+					Instantiate(Resources.Load("Prefab/flame"), new Vector2(0,0), Quaternion.identity);
 				}
 				
 				Destroy(removableBallList[i]); 						//リストにあるボールを消去
