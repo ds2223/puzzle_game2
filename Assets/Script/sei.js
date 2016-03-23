@@ -69,7 +69,7 @@ var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置に�
 			currentScore += 3000;
 			
 			var t : GameObject = firstBall;			//tにゲームオブジェクト付加
-			var go = Resources.Load("Prefab/explosion") as GameObject;//アセットのオブジェクトにアクセス
+			var go = Resources.Load("Prefab/bigexplosion") as GameObject;//アセットのオブジェクトにアクセス
 			Instantiate(go,t.transform.position,Quaternion.identity);//爆発のエフェクト
 			
 			Destroy (firstBall);
