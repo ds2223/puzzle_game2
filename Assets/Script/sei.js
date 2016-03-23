@@ -51,7 +51,6 @@ function Update() {
 scoreText.text = "Score:" + currentScore; //現在のスコアを表示
 }
 
-
 private function OnDragStart() {
 var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置にあるオブジェクト
 	if (col != null) {					//なにかをドラッグしているとき
@@ -66,13 +65,33 @@ var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置に�
 		else if (colObj.name.IndexOf("Bigball") != -1){
 			removableBallList = new Array(); 	//消去するボールのリストを初期化
 			firstBall = colObj; 				//はじめにドラッグしたボールを現在のボールを設定
+			currentName = colObj.name; 			//現在のリストのボール名前(色)を設定
+			PushToList(colObj); 				//消去するリストにボールを追加
+			
+			var dist = Vector2.Distance(lastBall.transform.position, colObj.transform.position);
+			if (dist <= 1.5) {			//ボール間の距離が一定値以下のとき
+				var clones = GameObject.FindGameObjectsWithTag("Player");
+				for (var clone in clones){
+				
+					PushToList(clone); 	//消去するリストにボールを追加
+				}
+ 			}
+
+			
+			var length = removableBallList.length;
+			for (var i = 0; i < length; i++) {
+				var t : GameObject = removableBallList[i];			//tにゲームオブジェクト付加
+				
+				var go = Resources.Load("Prefab/explosion") as GameObject;//アセットのオブジェクトにアクセス
+				Instantiate(go,t.transform.position,Quaternion.identity);//爆発のエフェクト
+				
+				Destroy(removableBallList[i]); 						//リストにあるボールを消去
+
+			}
+		
 			currentScore += 3000;
-			
-			var t : GameObject = firstBall;			//tにゲームオブジェクト付加
-			var go = Resources.Load("Prefab/bigexplosion") as GameObject;//アセットのオブジェクトにアクセス
-			Instantiate(go,t.transform.position,Quaternion.identity);//爆発のエフェクト
-			
-			Destroy (firstBall);
+			DropBall(length);
+			firstBall = null; //変数の初期化
 		}
 	}
 }
@@ -193,11 +212,11 @@ private function BigDropBall() {
 		BigBall.transform.position.x = Random.Range(-2.0, 2.0); 	//ボールのｘ座標をランダムに設定
 		BigBall.transform.position.y = 7; 							//ボールのｙ座標を調整
 		BigBall.transform.eulerAngles.z = Random.Range(-40, 40); 	//ボールの角度をランダムに設定
-		var spriteId2: int = Random.Range(0, 5); 				//ボールの画像のid(ボールの色)をランダムに設定
-		BigBall.name = "Bigball" + spriteId2; 							//ボールの名前を画像のidに合わせ変更
+		var spriteId2: int = Random.Range(0, 10); 					//ボールの画像のid(ボールの色)をランダムに設定
+		BigBall.name = "Bigball" + spriteId2; 						//ボールの名前を画像のidに合わせ変更
 		var ballTexture = BigBall.GetComponent(SpriteRenderer); 	//ボールの画像を管理している要素を取得
 		ballTexture.sprite = BigBallSprites[spriteId2]; 			//ボールの画像をidに合わせて変更
-		yield WaitForSeconds(0.05); 							//次のボールを生成するまで一定時間待つ
+		yield WaitForSeconds(0.05); 								//次のボールを生成するまで一定時間待つ
 	
 }
 }
