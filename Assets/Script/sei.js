@@ -5,6 +5,9 @@ public class sei extends MonoBehaviour {
 
 public var ballPrefab: GameObject;		//ボールのプレハブ
 public var ballSprites: Sprite[];		//ボールの画像のリスト
+
+public var BigBallPrefab: GameObject;		//ボールのプレハブ
+public var BigBallSprites: Sprite[];		//ボールの画像のリスト
  
 private var firstBall: GameObject;		//はじめにドラッグしたボール
 private var removableBallList: Array;	//消去するボールのリスト
@@ -60,6 +63,17 @@ var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置に�
 			currentName = colObj.name; 			//現在のリストのボール名前(色)を設定
 			PushToList(colObj); 				//消去するリストにボールを追加
 		}
+		else if (colObj.name.IndexOf("Bigball") != -1){
+			removableBallList = new Array(); 	//消去するボールのリストを初期化
+			firstBall = colObj; 				//はじめにドラッグしたボールを現在のボールを設定
+			currentScore += 3000;
+			
+			var t : GameObject = firstBall;			//tにゲームオブジェクト付加
+			var go = Resources.Load("Prefab/explosion") as GameObject;//アセットのオブジェクトにアクセス
+			Instantiate(go,t.transform.position,Quaternion.identity);//爆発のエフェクト
+			
+			Destroy (firstBall);
+		}
 	}
 }
 private function OnDragEnd() {
@@ -82,7 +96,9 @@ private function OnDragEnd() {
 
 			}
 			currentScore += (CalculateBaseScore(length) + 50 * length);
-			
+			if(length >= 5){
+				BigDropBall();
+			}
 			DropBall(length);
 		}
 		else {									//消去するリストに3個以上ボールがないとき
@@ -171,5 +187,17 @@ private function DropBall(count: int) {
 		ballTexture.sprite = ballSprites[spriteId]; 			//ボールの画像をidに合わせて変更
 		yield WaitForSeconds(0.05); 							//次のボールを生成するまで一定時間待つ
 	}
+}
+private function BigDropBall() {
+		var BigBall = Instantiate(BigBallPrefab); 					//ボールのプレハブを読み込み
+		BigBall.transform.position.x = Random.Range(-2.0, 2.0); 	//ボールのｘ座標をランダムに設定
+		BigBall.transform.position.y = 7; 							//ボールのｙ座標を調整
+		BigBall.transform.eulerAngles.z = Random.Range(-40, 40); 	//ボールの角度をランダムに設定
+		var spriteId2: int = Random.Range(0, 5); 				//ボールの画像のid(ボールの色)をランダムに設定
+		BigBall.name = "Bigball" + spriteId2; 							//ボールの名前を画像のidに合わせ変更
+		var ballTexture = BigBall.GetComponent(SpriteRenderer); 	//ボールの画像を管理している要素を取得
+		ballTexture.sprite = BigBallSprites[spriteId2]; 			//ボールの画像をidに合わせて変更
+		yield WaitForSeconds(0.05); 							//次のボールを生成するまで一定時間待つ
+	
 }
 }
