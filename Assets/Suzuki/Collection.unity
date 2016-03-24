@@ -372,6 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1001 &139004905
 Prefab:
@@ -462,7 +463,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_Text
-      value: "\u30B5\u30D3\u629C\u304D\u3067\u6CE8\u6587\u3057\u3061\u3083\u3060\u3081\u30CB\u30E3\uFF5E\n"
+      value: '
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
@@ -677,6 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &200055342
 GameObject:
@@ -883,6 +891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &243433718
 GameObject:
@@ -1022,6 +1031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &243850007
 GameObject:
@@ -1161,6 +1171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &245729987
 GameObject:
@@ -1300,6 +1311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &327922681
 GameObject:
@@ -1439,6 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &385812606
 GameObject:
@@ -1648,6 +1661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &419442669
 GameObject:
@@ -1921,6 +1935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &534563612
 GameObject:
@@ -2300,6 +2315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &669423416
 GameObject:
@@ -2576,6 +2592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &860533368
 GameObject:
@@ -2868,6 +2885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &995208766
 GameObject:
@@ -3144,6 +3162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &1079410056
 GameObject:
@@ -3283,6 +3302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &1093635694
 GameObject:
@@ -3337,8 +3357,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1a7940f708b619f4ca293f3cfa614200, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3665,7 +3685,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1191588494}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -3678,8 +3698,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f3887787c807821429fcdff367e6c53e, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3884,8 +3904,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300008, guid: 2994f34e1eea10d4e945751f2e73da2f, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4404,6 +4424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &1489207384
 GameObject:
@@ -4543,6 +4564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &1517734988
 GameObject:
@@ -4682,6 +4704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &1521994939
 GameObject:
@@ -5507,6 +5530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &1892520772
 GameObject:
@@ -5646,6 +5670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &2045351805
 GameObject:
@@ -5972,6 +5997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
+  placePos: {fileID: 1093635696}
   sushiPos: {fileID: 1259408081}
 --- !u!1 &2102422838
 GameObject:
