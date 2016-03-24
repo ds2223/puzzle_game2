@@ -95,7 +95,7 @@ public class PagingScrollViewController :
 
 #region ページコントロールを制御する処理の追加
 		// ページコントロールの表示を更新する
-		pageControl.SetCurrentPage(pageIndex);
+		//pageControl.SetCurrentPage(pageIndex);
 #endregion
 	}
 #endregion
@@ -132,8 +132,8 @@ public class PagingScrollViewController :
 		UpdateView();
 
 #region ページコントロールを制御する処理の追加
-		pageControl.SetNumberOfPages(5);	// ページ数を5に設定する
-		pageControl.SetCurrentPage(0);		// ページコントロールの表示を初期化する
+		//pageControl.SetNumberOfPages(5);	// ページ数を5に設定する
+		//pageControl.SetCurrentPage(0);		// ページコントロールの表示を初期化する
 #endregion
 	}
 

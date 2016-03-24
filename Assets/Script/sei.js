@@ -201,9 +201,11 @@ private function DropBall(count: int) {
 		ball.transform.position.y = 7; 							//ボールのｙ座標を調整
 		ball.transform.eulerAngles.z = Random.Range(-40, 40); 	//ボールの角度をランダムに設定
 		var spriteId: int = Random.Range(0, 5); 				//ボールの画像のid(ボールの色)をランダムに設定
-		ball.name = "Ball" + spriteId; 							//ボールの名前を画像のidに合わせ変更
+		//ball.name = "Ball" + spriteId; 							//ボールの名前を画像のidに合わせ変更
+		ball.name = "Ball0"; 
 		var ballTexture = ball.GetComponent(SpriteRenderer); 	//ボールの画像を管理している要素を取得
-		ballTexture.sprite = ballSprites[spriteId]; 			//ボールの画像をidに合わせて変更
+		//ballTexture.sprite = ballSprites[spriteId]; 			//ボールの画像をidに合わせて変更
+		ballTexture.sprite = ballSprites[0]; 
 		yield WaitForSeconds(0.05); 							//次のボールを生成するまで一定時間待つ
 	}
 }
@@ -212,10 +214,11 @@ private function BigDropBall() {
 		BigBall.transform.position.x = Random.Range(-2.0, 2.0); 	//ボールのｘ座標をランダムに設定
 		BigBall.transform.position.y = 7; 							//ボールのｙ座標を調整
 		BigBall.transform.eulerAngles.z = Random.Range(-40, 40); 	//ボールの角度をランダムに設定
-		var spriteId2: int = Random.Range(0, 10); 					//ボールの画像のid(ボールの色)をランダムに設定
+		var spriteId2: int = Random.Range(0, 20); 					//ボールの画像のid(ボールの色)をランダムに設定
 		BigBall.name = "Bigball" + spriteId2; 						//ボールの名前を画像のidに合わせ変更
 		var ballTexture = BigBall.GetComponent(SpriteRenderer); 	//ボールの画像を管理している要素を取得
 		ballTexture.sprite = BigBallSprites[spriteId2]; 			//ボールの画像をidに合わせて変更
+		Items.CollectionFlags[spriteId2] = true;					//ボールの図鑑フラグを変更
 		yield WaitForSeconds(0.05); 								//次のボールを生成するまで一定時間待つ
 	
 }
