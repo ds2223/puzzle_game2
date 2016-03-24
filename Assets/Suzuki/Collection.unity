@@ -373,7 +373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1001 &139004905
 Prefab:
   m_ObjectHideFlags: 0
@@ -415,19 +416,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22485596, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22485596, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: -29.75
       objectReference: {fileID: 0}
     - target: {fileID: 22485596, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 279
+      value: 285
       objectReference: {fileID: 0}
     - target: {fileID: 22485596, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 23
+      value: 23.5
       objectReference: {fileID: 0}
     - target: {fileID: 22485596, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_AnchorMin.x
@@ -463,9 +464,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_Text
-      value: '
-
-'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_Enabled
@@ -685,7 +684,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &200055342
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +892,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &243433718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,7 +1033,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &243850007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,7 +1174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &245729987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &327922681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,7 +1456,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &385812606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,7 +1667,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &419442669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1936,7 +1942,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &534563612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,7 +2323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &669423416
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,7 +2601,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &860533368
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,7 +2895,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &995208766
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,7 +3173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &1079410056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3303,7 +3314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &1093635694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4425,7 +4437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &1489207384
 GameObject:
   m_ObjectHideFlags: 0
@@ -4565,7 +4578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &1517734988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4705,7 +4719,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &1521994939
 GameObject:
   m_ObjectHideFlags: 0
@@ -5531,7 +5546,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &1892520772
 GameObject:
   m_ObjectHideFlags: 0
@@ -5671,7 +5687,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &2045351805
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,7 +6015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memoPos: {fileID: 67760324}
   placePos: {fileID: 1093635696}
-  sushiPos: {fileID: 1259408081}
+  namePos: {fileID: 1191588496}
+  sushiPos: {fileID: 1259408083}
 --- !u!1 &2102422838
 GameObject:
   m_ObjectHideFlags: 0
