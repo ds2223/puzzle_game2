@@ -15,7 +15,22 @@ public class Button : MonoBehaviour {
 
     public void ButtonPush()
     {
-        Debug.Log("Button Push !!");
+        Application.LoadLevel("Title");
+    }
+
+    public void ButtonTutorial()
+    {       
+        Application.LoadLevel("tutorial");
+    }
+
+    public void ButtonBook()
+    {
+        Application.LoadLevel("Collection");
+    }
+
+    public void ButtonMain()
+    {
+        Application.LoadLevel("Main");
     }
 }
 
