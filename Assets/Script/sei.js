@@ -69,28 +69,31 @@ var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置に�
 			PushToList(colObj); 				//消去するリストにボールを追加
 			
 			var dist = Vector2.Distance(lastBall.transform.position, colObj.transform.position);
-			if (dist <= 1.5) {			//ボール間の距離が一定値以下のとき
+			
 				var clones = GameObject.FindGameObjectsWithTag("Player");
 				for (var clone in clones){
 				
 					PushToList(clone); 	//消去するリストにボールを追加
 				}
- 			}
-
-			
 			var length = removableBallList.length;
-			for (var i = 0; i < length; i++) {
-				var t : GameObject = removableBallList[i];			//tにゲームオブジェクト付加
+			for (var i = 0; i < 12; i++) {
+				var x : int = Random.Range(1,40);
+				var t : GameObject = removableBallList[x];			//tにゲームオブジェクト付加
 				
 				var go = Resources.Load("Prefab/explosion") as GameObject;//アセットのオブジェクトにアクセス
 				Instantiate(go,t.transform.position,Quaternion.identity);//爆発のエフェクト
 				
-				Destroy(removableBallList[i]); 						//リストにあるボールを消去
+				Destroy(removableBallList[x]); 						//リストにあるボールを消去
 
 			}
-		
+			Destroy(removableBallList[0]);
+			for (var j = 0; j < length; j++) {
+				var listedBall: GameObject = removableBallList[j];
+				ChangeColor(listedBall, 1.0);
+				listedBall.name = listedBall.name.Substring(1, 5); //Ballの名前を元に戻す
+			}
 			currentScore += 3000;
-			DropBall(length);
+			DropBall(12);
 			firstBall = null; //変数の初期化
 		}
 	}
