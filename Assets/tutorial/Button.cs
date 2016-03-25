@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class Button : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
+    public AudioSource audioSource;
+    // Use this for initialization
+    void Start () {
+        audioSource = gameObject.GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -16,21 +16,25 @@ public class Button : MonoBehaviour {
     public void ButtonPush()
     {
         Application.LoadLevel("Title");
+        audioSource.Play();
     }
 
     public void ButtonTutorial()
     {       
         Application.LoadLevel("tutorial");
+        audioSource.Play();
     }
 
     public void ButtonBook()
     {
         Application.LoadLevel("Collection");
+        audioSource.Play();
     }
 
     public void ButtonMain()
     {
         Application.LoadLevel("Main");
+        audioSource.Play();
     }
 }
 

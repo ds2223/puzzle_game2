@@ -12,4 +12,17 @@ public class Battle : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void combat()
+    {
+        if (0 > 100)
+        {
+            GameClear();
+        }
+    }
+
+    public void GameClear()
+    {
+        Debug.Log("ゲームクリア");
+    }
 }
