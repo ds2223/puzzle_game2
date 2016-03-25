@@ -23,7 +23,7 @@ private var countTime = 3;				//カウントダウンの秒数
  
 public var score: GameObject;			//スコア表示
 private var scoreText: Text;			//スコア表示のテキスト
-private var currentScore = 0;			//現在のスコア
+static private var currentScore = 0;			//現在のスコア
 
 public var myClip : AudioClip;			//SE用の音楽オブジェクト
 public var ds = 0; 						//スイッチ
