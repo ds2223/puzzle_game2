@@ -26,8 +26,7 @@ private var scoreText: Text;			//スコア表示のテキスト
 private var currentScore = 0;			//現在のスコア
 
 public var myClip : AudioClip;			//SE用の音楽オブジェクト
-//public var key : int;
-//key = "Savedata";
+public var ds = 0; 						//スイッチ
 
 
 function Start() {
@@ -64,13 +63,13 @@ var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置に�
 			currentName = colObj.name; 			//現在のリストのボール名前(色)を設定
 			PushToList(colObj); 				//消去するリストにボールを追加
 		}
-		else if (colObj.name.IndexOf("Bigball") != -1){
+		else if (colObj.name.IndexOf("Bigball") != -1 && ds == 0){
+		ds = 1;									//スイッチオン
 			removableBallList = new Array(); 	//消去するボールのリストを初期化
 			firstBall = colObj; 				//はじめにドラッグしたボールを現在のボールを設定
+			/*
 			currentName = colObj.name; 			//現在のリストのボール名前(色)を設定
 			PushToList(colObj); 				//消去するリストにボールを追加
-			
-			var dist = Vector2.Distance(lastBall.transform.position, colObj.transform.position);
 			
 				var clones = GameObject.FindGameObjectsWithTag("Player");
 				for (var clone in clones){
@@ -82,7 +81,7 @@ var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置に�
 				var x : int = Random.Range(1,40);
 				var t : GameObject = removableBallList[x];			//tにゲームオブジェクト付加
 				
-				var go = Resources.Load("Prefab/explosion") as GameObject;//アセットのオブジェクトにアクセス
+				var go = Resources.Load("Prefab/bigexplosion2") as GameObject;//アセットのオブジェクトにアクセス
 				Instantiate(go,t.transform.position,Quaternion.identity);//爆発のエフェクト
 				
 				Destroy(removableBallList[x]); 						//リストにあるボールを消去
@@ -94,9 +93,21 @@ var col = GetCurrentHitCollider(); 		//現在マウスカーソルの位置に�
 				ChangeColor(listedBall, 1.0);
 				listedBall.name = listedBall.name.Substring(1, 5); //Ballの名前を元に戻す
 			}
+			*/
+			var t : GameObject = firstBall;			//tにゲームオブジェクト付加
+			
+			var go = Resources.Load("Prefab/bigexplosion2") as GameObject;//アセットのオブジェクトにアクセス
+			Instantiate(go,t.transform.position,Quaternion.identity);//爆発のエフェクト
+			
+			var go1 = Resources.Load("Prefab/bigexplosion") as GameObject;//アセットのオブジェクトにアクセス
+			Instantiate(go1,t.transform.position,Quaternion.identity);//爆発のエフェクト
+			
+			Destroy(firstBall);
 			currentScore += 3000;
-			DropBall(12);
-			firstBall = null; //変数の初期化
+			DropBall(7);
+			firstBall = null; 				//変数の初期化
+			yield WaitForSeconds(0.31);
+			ds = 0;							//0.3秒待ってからスイッチオフ
 		}
 	}
 }
