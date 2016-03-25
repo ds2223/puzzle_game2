@@ -26,6 +26,8 @@ private var scoreText: Text;			//スコア表示のテキスト
 private var currentScore = 0;			//現在のスコア
 
 public var myClip : AudioClip;			//SE用の音楽オブジェクト
+//public var key : int;
+//key = "Savedata";
 
 
 function Start() {
@@ -180,6 +182,12 @@ private function StartTimer() {
 	timerText.text = "Finish";
 	OnDragEnd();
 	isPlaying = false;
+	
+	
+	//var length = Items.CollectionSaveData.length;
+	//for (var t = 0; t < length; t++) {
+	//	PlayerPrefs.Setint(key,Items.CollectionSaveData[t])
+	//}
 }
  
 private function GetCurrentHitCollider() {
@@ -222,6 +230,7 @@ private function BigDropBall() {
 		var ballTexture = BigBall.GetComponent(SpriteRenderer); 	//ボールの画像を管理している要素を取得
 		ballTexture.sprite = BigBallSprites[spriteId2]; 			//ボールの画像をidに合わせて変更
 		Items.CollectionFlags[spriteId2] = true;					//ボールの図鑑フラグを変更
+		//Items.CollectionSaveData[spriteId2] = 1;					//図鑑フラグの同期処理
 		yield WaitForSeconds(0.05); 								//次のボールを生成するまで一定時間待つ
 	
 }
