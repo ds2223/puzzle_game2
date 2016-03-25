@@ -49,7 +49,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u7A81\u7136\u5909\u7570\u30CB\u30E3\uFF01"
+  m_Text: "\u304B\u3093\u3074\u3087\u3046\u5DFB\u30CB\u30E3\uFF01"
 --- !u!222 &22232514
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -79,7 +79,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Text
+      value: "\u304B\u3093\u3074\u3087\u3046\u5DFB\u30CB\u30E3\uFF01"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 112762}
