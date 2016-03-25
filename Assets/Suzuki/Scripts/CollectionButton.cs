@@ -22,7 +22,7 @@ public class CollectionButton : MonoBehaviour
         //sushiPosの画像を差し替える
         sushiPos.sprite = images[int.Parse(gameObject.name)];
 
-        Sprite[] nameImgs = Resources.LoadAll<Sprite>("Images/Oshinagakis");
+        Sprite[] nameImgs = Resources.LoadAll<Sprite>("Images/Osinagakis");
         namePos = namePos.GetComponent<Image>();
         namePos.sprite = nameImgs[int.Parse(gameObject.name)];
 
