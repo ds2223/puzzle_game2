@@ -18,7 +18,7 @@ private var isPlaying = false;			//プレイ中かどうか
  
 public var timer: GameObject;			//タイマーとなるオブジェクト
 private var timerText: Text;			//タイマーのテキスト
-private var timeLimit = 60;				//制限時間
+private var timeLimit = 5;				//制限時間
 private var countTime = 3;				//カウントダウンの秒数
  
 public var score: GameObject;			//スコア表示
@@ -193,11 +193,15 @@ private function StartTimer() {
 	timerText.text = "Finish";
 	OnDragEnd();
 	isPlaying = false;
-	
+
+	for(var i = 0; i < Items.CollectionFlags.Length; i++){
+		PlayerPrefs.SetInt(Items.key + i.ToString(), Items.CollectionFlagsInts[i]);
+	}
+	Debug.Log("Saved!");
 	
 	//var length = Items.CollectionSaveData.length;
 	//for (var t = 0; t < length; t++) {
-	//	PlayerPrefs.Setint(key,Items.CollectionSaveData[t])
+	//	PlayerPrefs.Setint(key,Items.CollectionSaveData[t]);
 	//}
 }
  
@@ -241,7 +245,7 @@ private function BigDropBall() {
 		var ballTexture = BigBall.GetComponent(SpriteRenderer); 	//ボールの画像を管理している要素を取得
 		ballTexture.sprite = BigBallSprites[spriteId2]; 			//ボールの画像をidに合わせて変更
 		Items.CollectionFlags[spriteId2] = true;					//ボールの図鑑フラグを変更
-		//Items.CollectionSaveData[spriteId2] = 1;					//図鑑フラグの同期処理
+		Items.CollectionFlagsInts[spriteId2] = 1;					//図鑑seva用フラグの同期処理
 		yield WaitForSeconds(0.05); 								//次のボールを生成するまで一定時間待つ
 	
 }
