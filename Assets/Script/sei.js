@@ -18,12 +18,12 @@ private var isPlaying = false;			//プレイ中かどうか
  
 public var timer: GameObject;			//タイマーとなるオブジェクト
 private var timerText: Text;			//タイマーのテキスト
-private var timeLimit = 15;				//制限時間
+static public var timeLimit = 15;				//制限時間
 private var countTime = 3;				//カウントダウンの秒数
  
 public var score: GameObject;			//スコア表示
 private var scoreText: Text;			//スコア表示のテキスト
-static private var currentScore = 0;			//現在のスコア
+static public var currentScore = 0;			//現在のスコア
 
 public var myClip : AudioClip;			//SE用の音楽オブジェクト
 public var ds = 0; 						//スイッチ
