@@ -18,7 +18,7 @@ private var isPlaying = false;			//プレイ中かどうか
  
 public var timer: GameObject;			//タイマーとなるオブジェクト
 private var timerText: Text;			//タイマーのテキスト
-private var timeLimit = 5;				//制限時間
+private var timeLimit = 15;				//制限時間
 private var countTime = 3;				//カウントダウンの秒数
  
 public var score: GameObject;			//スコア表示

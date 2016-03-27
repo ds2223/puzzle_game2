@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/tutorial/tutorial.unity
   - enabled: 1
     path: Assets/tutorial/tutorial2.unity
+  - enabled: 1
+    path: Assets/Suzu/StaffsPage.unity

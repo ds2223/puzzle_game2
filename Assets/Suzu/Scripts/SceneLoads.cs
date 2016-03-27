@@ -10,7 +10,13 @@ public class SceneLoads : MonoBehaviour {
     }
 	public void SceneLoadMaim()
 	{
+        
 		//SceneManager.LoadScene("Main");
         Application.LoadLevel("Main");
+    }
+    public void SceneLoadStaffsPtage()
+    {
+        //SceneManager.LoadScene("StaffsPage");
+        Application.LoadLevel("StaffsPage");
     }
 }
