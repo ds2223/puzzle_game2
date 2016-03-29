@@ -464,10 +464,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_Text
-      value: 
+      value: "\u4E0B\u753B\u9762\u306F\u5DE6\u53F3\u306B\u30B9\u30EF\u30A4\u30D7\u3067\u304D\u308B\u30CB\u30E3\uFF5E"
       objectReference: {fileID: 0}
     - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
+      propertyPath: m_Color.r
+      value: 0.14705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
+      propertyPath: m_Color.g
+      value: 0.25882345
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499900, guid: 8c5dd9fc740a6c64d9054931bd7c87d6, type: 2}
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5349,7 +5361,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131, y: 129}
+  m_AnchoredPosition: {x: -128.3, y: 129.02}
   m_SizeDelta: {x: 77, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760297897

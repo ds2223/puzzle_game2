@@ -14,7 +14,10 @@ public class CollectionButton : MonoBehaviour
     {
         Debug.Log(gameObject.name);
         GameObject go = Resources.Load("Prefab/Memo_" + gameObject.name) as GameObject;
-
+        //一言メモのテキストを差し替える
+        memoPos.GetComponent<Text>().text = go.GetComponent<Text>().text;
+        memoPos.GetComponent<Text>().fontSize = go.GetComponent<Text>().fontSize;
+        memoPos.GetComponent<Text>().color = go.GetComponent<Text>().color;
         //Resources内のすしネコのスプライトを配列で取得
         Sprite[] images = Resources.LoadAll<Sprite>("sb");
         //sushiPosのimageを取得
@@ -26,8 +29,7 @@ public class CollectionButton : MonoBehaviour
         namePos = namePos.GetComponent<Image>();
         namePos.sprite = nameImgs[int.Parse(gameObject.name)];
 
-        //一言メモのテキストを差し替える
-        memoPos.GetComponent<Text>().text = go.GetComponent<Text>().text;
+       
 
         if (transform.parent.gameObject.name == "Nami")
         {
