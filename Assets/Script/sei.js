@@ -19,7 +19,7 @@ private var isPlaying = false;			//プレイ中かどうか
  
 public var timer: GameObject;			//タイマーとなるオブジェクト
 private var timerText: Text;			//タイマーのテキスト
-public static var timeLimit = 10;				//制限時間
+public static var timeLimit = 30;				//制限時間
 private var countTime = 3;				//カウントダウンの秒数
  
 public var score: GameObject;			//スコア表示
@@ -182,12 +182,12 @@ function PushToList(obj: GameObject) {
 private function CountDown() {
 	var count = countTime;
 	while (count > 0) {
-		timerText.text = count.ToString(); 	//カウントダウンのテキストを変更
+		//timerText.text = count.ToString(); 	//カウントダウンのテキストを変更
 		StartText.text = count.ToString();
 		yield WaitForSeconds(1); 			//1秒待つ
 		count -= 1; 						//カウントを1つ減らす
 	}
-	timerText.text = "Start!";
+	//timerText.text = "Start!";
 	StartText.text = "始め！";
 	isPlaying = true;
 	yield WaitForSeconds(1);
@@ -229,6 +229,10 @@ private function StartTimer() {
 		PlayerPrefs.SetInt("HighScore3",currentScore);		//3番目のデータにセーブ
 	}
 	
+	for(var i = 0; i < Items.CollectionFlags.Length; i++){
+	    PlayerPrefs.SetInt(Items.key + i.ToString(), Items.CollectionFlagsInts[i]);
+	}
+	Debug.Log("Saved!");
 	//var length = Items.CollectionSaveData.length;
 	//for (var t = 0; t < length; t++) {
 	//	PlayerPrefs.Setint(key,Items.CollectionSaveData[t])
@@ -257,11 +261,11 @@ private function DropBall(count: int) {
 		ball.transform.position.y = 7; 							//ボールのｙ座標を調整
 		ball.transform.eulerAngles.z = Random.Range(-40, 40); 	//ボールの角度をランダムに設定
 		var spriteId: int = Random.Range(0, 5); 				//ボールの画像のid(ボールの色)をランダムに設定
-		//ball.name = "Ball" + spriteId; 							//ボールの名前を画像のidに合わせ変更
-		ball.name = "Ball0"; 
+		ball.name = "Ball" + spriteId; 							//ボールの名前を画像のidに合わせ変更
+		//ball.name = "Ball0"; 
 		var ballTexture = ball.GetComponent(SpriteRenderer); 	//ボールの画像を管理している要素を取得
-		//ballTexture.sprite = ballSprites[spriteId]; 			//ボールの画像をidに合わせて変更
-		ballTexture.sprite = ballSprites[0]; 
+		ballTexture.sprite = ballSprites[spriteId]; 			//ボールの画像をidに合わせて変更
+		//ballTexture.sprite = ballSprites[0]; 
 		yield WaitForSeconds(0.05); 							//次のボールを生成するまで一定時間待つ
 	}
 }
@@ -275,6 +279,7 @@ private function BigDropBall() {
 		var ballTexture = BigBall.GetComponent(SpriteRenderer); 	//ボールの画像を管理している要素を取得
 		ballTexture.sprite = BigBallSprites[spriteId2]; 			//ボールの画像をidに合わせて変更
 		Items.CollectionFlags[spriteId2] = true;					//ボールの図鑑フラグを変更
+		Items.CollectionFlagsInts[spriteId2] = 1;	
 		//Items.CollectionSaveData[spriteId2] = 1;					//図鑑フラグの同期処理
 	
 }

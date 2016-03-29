@@ -19,4 +19,9 @@ public class SceneLoads : MonoBehaviour {
         //SceneManager.LoadScene("StaffsPage");
         Application.LoadLevel("StaffsPage");
     }
+    public void SceneLoadTitle()
+    {
+        //SceneManager.LoadScene("StaffsPage");
+        Application.LoadLevel("Title");
+    }
 }
