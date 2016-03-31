@@ -96,19 +96,20 @@ public class StaffsButton : MonoBehaviour
             //Resources内のすしネコのスプライトを配列で取得
             Sprite[] images = Resources.LoadAll<Sprite>("sb");
             sushiPos = sushiPos.GetComponent<Image>();
-            sushiPos.sprite = images[12];
+            sushiPos.sprite = images[4];
 
 
-            Sprite[] nameImgs = Resources.LoadAll<Sprite>("Images/BG_Staffroll01");
+            Sprite[] nameImgs = Resources.LoadAll<Sprite>("Images/BG_Staffroll03");
             namePos = namePos.GetComponent<Image>();
-            namePos.sprite = nameImgs[1];
+            namePos.sprite = nameImgs[0];
 
-            Sprite[] sp = Resources.LoadAll<Sprite>("Images/BG_Staffroll01");
+            Sprite[] sp = Resources.LoadAll<Sprite>("Images/BG_Staffroll03");
             rolePos = rolePos.GetComponent<Image>();
-            rolePos.sprite = sp[5];
+            rolePos.sprite = sp[1];
 
-            GameObject go = Resources.Load("Prefab/Memo_MizunoComment") as GameObject;
+            GameObject go = Resources.Load("Prefab/Memo_OmakeComment") as GameObject;
             memoPos.GetComponent<Text>().text = go.GetComponent<Text>().text;
+            Application.OpenURL("https://youtu.be/JtEnkMeWn-Y");
         }
     }
 
